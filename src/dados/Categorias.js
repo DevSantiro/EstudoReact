@@ -8,6 +8,12 @@ export default class Categorias {
     this.inscritos.push(func);
   }
 
+  desinscrever(func) {
+    console.log(this.inscritos.length)
+    this.inscritos = this.inscritos.filter(f => f !== func)
+    console.log(this.inscritos.length)
+  }
+
   notificar() {
     this.inscritos.forEach(func => {
       func(this.categorias)
